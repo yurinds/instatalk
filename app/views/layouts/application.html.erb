@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Instachat</title>
-<%= csrf_meta_tags %>
+  <head>
+    <title>Instachat</title>
+    <%= csrf_meta_tags %>
 
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<body>
-<div class="container">
-  <div class="row justify-content-md-center">
-    <div class="col-md-8">
-      <div class="card text-center mt-4 mb-4">
-        <div class="card-body">
-          Welcome to Instatalk, <b><%= current_user.nickname %></b>!
+  <body>
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="card text-center mt-4 mb-4">
+            <div class="card-body">
+              Welcome to Instatalk, <b><%= current_user.nickname %></b>!
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-10">
+              <%= yield %>
+            </div>
+
+            <div class="col-md-2">
+              <div class="card">
+                <div class="card-header font-weight-bold">Сейчас на сайте:</div>
+                <div class="card-body" id="users-online">
+                  <%= render partial: 'users/user', collection: @users %>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <%= yield %>
     </div>
   </div>
-</div>
 </body>
 </html>
