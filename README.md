@@ -25,10 +25,10 @@ gem install bundler
 2. Склонируйте репозиторий:
 
 ```
-git clone https://github.com/yurinds/bbq.git
+git clone https://github.com/yurinds/instatalk.git
 
 # переход в папку с приложением
-cd bbq
+cd instatalk
 ```
 
 3. Установите все зависимости:
