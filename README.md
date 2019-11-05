@@ -1,24 +1,56 @@
-# README
+# INSTATALK
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Простейший в режиме реального времени.
 
-Things you may want to cover:
+Используемые технологии:
 
-* Ruby version
+- Мгновенный переход по ссылкам с помощью `turbolinks`;
+- Мгновенная доставка сообщений и отображение пользователей онлайн при помощи `ActionCable`.
 
-* System dependencies
+Требуемая версия Ruby и Rails:
 
-* Configuration
+```
+ruby >= 2.5.1
+rails ~> 5.2.3
+```
 
-* Database creation
+Для запуска выполните в терминале следующие шаги:
 
-* Database initialization
+1. Установите `Bundler`, если он ещё не установлен:
 
-* How to run the test suite
+```
+gem install bundler
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Склонируйте репозиторий:
 
-* Deployment instructions
+```
+git clone https://github.com/yurinds/bbq.git
 
-* ...
+# переход в папку с приложением
+cd bbq
+```
+
+3. Установите все зависимости:
+
+```
+bundle install
+```
+
+4. Выполните миграции БД:
+
+```
+bundle exec rails db:migrate
+```
+
+5. Запустите сервер приложения:
+
+```
+bundle exec rails s
+```
+
+6. Откройте в браузере:
+
+```
+http://localhost:3000
+```
